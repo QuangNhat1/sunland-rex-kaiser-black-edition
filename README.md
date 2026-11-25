@@ -35,7 +35,7 @@ Truy cập trực tiếp từ cloud bị chặn bởi allowlist (`CONNECT tunnel
 
 ## Giới hạn tài sản tham khảo
 
-Chưa có ảnh hướng dẫn sử dụng riêng; biểu tượng tài liệu được ghi rõ không phải ảnh tài liệu gốc. Các ảnh kiếm, áo choàng, hai mặt coin, robot đứng thẳng và chi tiết đều đã thay bằng tài sản thật từ `machina.rar`, không còn crop tạm từ một ảnh robot. Ảnh hộp trong bản demo là hộp bản Trung do người dùng gửi; không tráo thành hộp bản Hàn. Hai JPG tạo dáng trong archive đã có bản tách nền tương ứng (`addition-box` và ảnh robot hiện tại), nên không đưa bản trùng/nền xám vào trang.
+Đã bỏ thẻ hướng dẫn sử dụng theo yêu cầu; danh sách phụ kiện hiển thị 5 mục có ảnh thực tế. Các ảnh kiếm, áo choàng, hai mặt coin, robot đứng thẳng và chi tiết đều đã thay bằng tài sản thật từ `machina.rar`, không còn crop tạm từ một ảnh robot. Ảnh hộp trong bản demo là hộp bản Trung do người dùng gửi; không tráo thành hộp bản Hàn. Hai JPG tạo dáng trong archive đã có bản tách nền tương ứng (`addition-box` và ảnh robot hiện tại), nên không đưa bản trùng/nền xám vào trang.
 
 ## Hành vi
 
