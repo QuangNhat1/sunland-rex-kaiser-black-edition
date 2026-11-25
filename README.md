@@ -31,7 +31,7 @@ Truy cập trực tiếp từ cloud bị chặn bởi allowlist (`CONNECT tunnel
 - Thông tin Deluxe 32 cm / Chinese Version dựa trên mô tả người dùng trong dự án trước, cần đối chiếu đúng listing Shopee trước khi phát hành.
 - Video Black Edition Deluxe do người dùng gửi; video tải khi người xem yêu cầu, không autoplay.
 - Ảnh nhân vật/quyền thương hiệu thuộc chủ sở hữu tương ứng; attribution SAMG/EBS nằm ở footer. Chưa gắn thông tin xuất xứ sản xuất, giá, khuyến mãi, tồn kho hay cam kết bảo hành chưa được cung cấp.
-- Mọi nút mua dẫn tới https://shopee.vn/sunlandhobby. Chưa có URL SKU riêng.
+- Các nút mua Rex Kaiser Black dẫn tới https://s.shopee.vn/4fy4AhOHGl do người dùng cung cấp. Nút gian hàng và tìm hiểu bộ hợp thể giữ https://shopee.vn/sunlandhobby; nút cuối trang dẫn tới fanpage Facebook.
 
 ## Giới hạn tài sản tham khảo
 

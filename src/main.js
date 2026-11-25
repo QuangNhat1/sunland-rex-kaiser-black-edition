@@ -5,7 +5,8 @@ import '@fontsource/barlow-condensed/vietnamese-800.css';
 import '@fontsource/be-vietnam-pro/vietnamese-400.css';
 import '@fontsource/be-vietnam-pro/vietnamese-600.css';
 import './style.css';
-const shop='https://shopee.vn/sunlandhobby';
+const shop='https://s.shopee.vn/4fy4AhOHGl';
+const storefront='https://shopee.vn/sunlandhobby';
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
 const external='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 const machina=(name)=>`/images/machina/${name}.webp`;
@@ -18,14 +19,14 @@ const views=[
 {key:'robot',name:'Dạng robot',title:'Bạo chúa thức tỉnh.',text:'Thanh kiếm lớn, giáp đen và áo choàng đỏ. Hình thái robot thể hiện rõ nét diện mạo của phiên bản Black Edition Deluxe.'},
 {key:'combined',name:'Hợp thể D9',title:'Sức mạnh của cả đội hình.',text:'Hình ảnh Rex Kaiser Black Edition kết hợp cùng các chiến binh D9 nhiều màu. Các chiến binh nâng cấp có thể được bán riêng; kiểm tra cấu hình và khả năng tương thích trước khi mua.'},
 ];
-const cta=(label='Mua trên Shopee',classes='button red')=>`<a class="${classes}" href="${shop}" target="_blank" rel="noopener noreferrer">${label}${external}</a>`;
+const cta=(label='Mua trên Shopee',classes='button red',href=shop)=>`<a class="${classes}" href="${href}" target="_blank" rel="noopener noreferrer">${label}${external}</a>`;
 document.querySelector('#app').innerHTML=`
 <div class="reading-progress" aria-hidden="true"></div>
 <header class="header">
  <a class="brand" href="#dau-trang" aria-label="Sunland Hobby — về đầu trang"><img src="/images/sunland-wordmark.png" alt="Sunland Hobby" width="210" height="74" /></a>
  <span class="header-edition">REX KAISER <b>BLACK EDITION</b></span>
  <button class="menu-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
- <nav id="navigation" aria-label="Điều hướng chính"><a href="#thiet-ke">Thiết kế</a><a href="#phu-kien">Phụ kiện</a><a href="#bien-hinh">Biến hình</a><a href="#hop-the">Hợp thể D9</a><a href="#video">Video</a>${cta('Gian hàng Shopee','header-shop')}</nav>
+ <nav id="navigation" aria-label="Điều hướng chính"><a href="#thiet-ke">Thiết kế</a><a href="#phu-kien">Phụ kiện</a><a href="#bien-hinh">Biến hình</a><a href="#hop-the">Hợp thể D9</a><a href="#video">Video</a>${cta('Gian hàng Shopee','header-shop',storefront)}</nav>
 </header>
 <main id="noi-dung">
 <section class="hero reference-hero" id="dau-trang" aria-labelledby="hero-title">
@@ -71,7 +72,7 @@ document.querySelector('#app').innerHTML=`
  <p class="gallery-note">Ảnh sản phẩm đã tách nền từ ảnh gốc. Hình huy hiệu là hình dựng minh họa. Hình hợp thể có thể gồm các sản phẩm bán riêng.</p><p class="sr-only" id="gallery-status" aria-live="polite"></p>
 </section>
 <section class="combination" id="hop-the" aria-labelledby="combine-title">
- <div class="combination-copy"><p class="eyebrow gold">HỢP THỂ D9</p><h2 id="combine-title">KHI CẢ ĐỘI HÌNH<br><em>CÙNG THỨC TỈNH.</em></h2><p>Rex Kaiser ở trung tâm.<br>Các chiến binh D9 mở rộng diện mạo hợp thể.</p><p class="muted">Khám phá Rex Kaiser Black Edition ở trung tâm, kết hợp cùng các chiến binh D9 nhiều màu. Hãy kiểm tra đúng phiên bản và từng chiến binh đi kèm tại gian hàng.</p>${cta('Tìm hiểu bộ hợp thể','text-link gold')}</div>
+ <div class="combination-copy"><p class="eyebrow gold">HỢP THỂ D9</p><h2 id="combine-title">KHI CẢ ĐỘI HÌNH<br><em>CÙNG THỨC TỈNH.</em></h2><p>Rex Kaiser ở trung tâm.<br>Các chiến binh D9 mở rộng diện mạo hợp thể.</p><p class="muted">Khám phá Rex Kaiser Black Edition ở trung tâm, kết hợp cùng các chiến binh D9 nhiều màu. Hãy kiểm tra đúng phiên bản và từng chiến binh đi kèm tại gian hàng.</p>${cta('Tìm hiểu bộ hợp thể','text-link gold',storefront)}</div>
  <div class="combination-art"><span aria-hidden="true">D9</span><img src="${image('combined')}" alt="Rex Kaiser Black Edition hợp thể cùng các chiến binh D9 nhiều màu" width="1320" height="1191" loading="lazy" /><p>Ảnh minh họa cấu hình hợp thể. Các chiến binh có thể bán riêng.</p></div>
 </section>
 <section class="video-section section" id="video" aria-labelledby="video-title">
@@ -80,7 +81,7 @@ document.querySelector('#app').innerHTML=`
 </section>
 <section class="purchase section" id="chon-san-pham" aria-labelledby="purchase-title">
  <div class="section-meta"><span>THÊM VÀO BỘ SƯU TẬP</span><span>SUNLAND HOBBY</span></div>
- <div class="purchase-layout"><div class="box-art"><img src="${image('box')}" alt="Bao bì gốc Rex Kaiser Black Edition với chữ in nguyên bản" width="784" height="906" loading="lazy" /></div><div class="purchase-copy"><p class="eyebrow gold">MINIFORCE · DINOID WARRIORS</p><h2 id="purchase-title">REX KAISER<br><em>BLACK EDITION.</em></h2><p class="purchase-subtitle">Dành một vị trí cho bạo chúa.</p><dl><div><dt>Phiên bản giới thiệu</dt><dd>Black Edition Deluxe</dd></div><div><dt>Chiều cao robot</dt><dd>32 cm</dd></div><div><dt>Thị trường phiên bản</dt><dd>Chinese Version</dd></div><div><dt>Mua hàng tại</dt><dd>Shopee · Sunland Hobby</dd></div></dl><p class="purchase-note">Giá, tình trạng hàng và phụ kiện theo từng phân loại tại Shopee. Kiểm tra đúng phiên bản trước khi đặt mua.</p>${cta('Xem giá & mua trên Shopee')}<p class="small-note">Bạn sẽ được chuyển đến gian hàng Sunland Hobby.</p></div></div>
+ <div class="purchase-layout"><div class="box-art"><img src="${image('box')}" alt="Bao bì gốc Rex Kaiser Black Edition với chữ in nguyên bản" width="784" height="906" loading="lazy" /></div><div class="purchase-copy"><p class="eyebrow gold">MINIFORCE · DINOID WARRIORS</p><h2 id="purchase-title">REX KAISER<br><em>BLACK EDITION.</em></h2><p class="purchase-subtitle">Dành một vị trí cho bạo chúa.</p><dl><div><dt>Phiên bản giới thiệu</dt><dd>Black Edition Deluxe</dd></div><div><dt>Chiều cao robot</dt><dd>32 cm</dd></div><div><dt>Thị trường phiên bản</dt><dd>Chinese Version</dd></div><div><dt>Mua hàng tại</dt><dd>Shopee · Sunland Hobby</dd></div></dl><p class="purchase-note">Giá, tình trạng hàng và phụ kiện theo từng phân loại tại Shopee. Kiểm tra đúng phiên bản trước khi đặt mua.</p>${cta('Xem giá & mua trên Shopee')}<p class="small-note">Bạn sẽ được chuyển đến sản phẩm Rex Kaiser Black trên Shopee.</p></div></div>
 </section>
 <section class="faq section" id="cau-hoi" aria-labelledby="faq-title"><div class="section-meta"><span>CÂU HỎI THƯỜNG GẶP</span><span>TRƯỚC KHI MUA</span></div><div class="faq-layout"><h2 id="faq-title">BẠN MUỐN<br><em>BIẾT THÊM?</em></h2><div class="faq-list">
 <details><summary>Đây là bản CoolPlay hay Deluxe?<span>+</span></summary><p>Trang này giới thiệu Rex Kaiser Black Edition Deluxe 32 cm. CoolPlay là phân loại khác. Khi đến Shopee, bạn hãy chọn đúng tên phiên bản và kiểm tra mô tả của shop.</p></details>
@@ -89,7 +90,7 @@ document.querySelector('#app').innerHTML=`
 <details><summary>Làm sao chọn đúng bộ hợp thể?<span>+</span></summary><p>Gửi tên hoặc hình bộ Rex Kaiser bạn đang có qua chat Shopee của Sunland Hobby để shop kiểm tra phiên bản và khả năng tương thích trước khi đặt mua.</p></details>
 <details><summary>Thông tin bản Hàn có giống bản Trung không?<span>+</span></summary><p>Machina Core giới thiệu bản Hàn với mã MFS7. Trang Sunland giới thiệu Chinese Version; bao bì, phụ kiện, mã sản phẩm và chính sách có thể khác. Thông số đóng hộp, chứng nhận KC, giá và bảo hành của bản Hàn không được áp dụng mặc định cho sản phẩm tại Sunland.</p></details>
 <details><summary>Áo choàng có thể tạo dáng không?<span>+</span></summary><p>Nguồn Machina Core mô tả áo choàng Kaiser của bản Hàn có 6 dây kim loại để tạo dáng. Với bản Trung, hãy hỏi shop về cấu tạo áo choàng trong đúng phân loại bạn chọn.</p></details>
-<details><summary>Mua hàng và nhận hỗ trợ ở đâu?<span>+</span></summary><p>Mọi nút mua hàng trên trang đều dẫn đến gian hàng Shopee Sunland Hobby. Bạn có thể xem giá hiện tại, hỏi về phụ kiện, giao hàng và chính sách hỗ trợ tại đó.</p></details>
+<details><summary>Mua hàng và nhận hỗ trợ ở đâu?<span>+</span></summary><p>Các nút mua Rex Kaiser Black dẫn đến trang sản phẩm trên Shopee của Sunland Hobby. Bạn có thể xem giá hiện tại, hỏi về phụ kiện, giao hàng và chính sách hỗ trợ tại đó.</p></details>
 </div></div></section>
 <section class="closing"><p class="eyebrow">BUILD · COLLECT · ENJOY</p><h2>GÓC TRƯNG BÀY CỦA BẠN.<br><em>KHÍ CHẤT CỦA BLACK EDITION.</em></h2><a class="button red" href="https://www.facebook.com/sunlandhobby" target="_blank" rel="noopener noreferrer">Theo dõi Sunland Hobby trên Facebook ${external}</a></section>
 </main>
