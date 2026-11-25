@@ -27,7 +27,7 @@ Truy cập trực tiếp từ cloud bị chặn bởi allowlist (`CONNECT tunnel
 
 - Ảnh từ hai tệp `Black-Rex-Kaiser.rar` do người dùng gửi, đã tách nền bằng mặt nạ trên pixel gốc, tăng nét nhẹ và xóa chữ ngoài sản phẩm. Chữ in trên hộp được giữ nguyên. Không dùng ảnh AI vẽ lại.
 - `machina.rar`: ảnh mở đầu, ảnh áo choàng chính và ảnh phụ, robot đứng thẳng, kiếm rời, áo choàng rời, hai mặt coin, mô hình chỉ vị trí chi tiết, ba ảnh cận cảnh và ba hình thái. Ảnh giữ nguyên pixel hiển thị và độ trong suốt của sản phẩm gốc, chỉ chuyển PNG sang WebP lossless; WebP có sẵn được giữ nguyên file. Riêng `card-4` xóa nhãn tiếng Anh rồi đặt chữ Việt, không thay đổi hình coin/mũi tên.
-- 6 dạng: hộp → huy hiệu → thú → xe → robot → hợp thể D9 Black.
+- 6 dạng: hộp → huy hiệu → thú → xe → robot → hợp thể D9.
 - Thông tin Deluxe 32 cm / Chinese Version dựa trên mô tả người dùng trong dự án trước, cần đối chiếu đúng listing Shopee trước khi phát hành.
 - Video Black Edition Deluxe do người dùng gửi; video tải khi người xem yêu cầu, không autoplay.
 - Ảnh nhân vật/quyền thương hiệu thuộc chủ sở hữu tương ứng; attribution SAMG/EBS nằm ở footer. Chưa gắn thông tin xuất xứ sản xuất, giá, khuyến mãi, tồn kho hay cam kết bảo hành chưa được cung cấp.
@@ -40,3 +40,7 @@ Chưa có ảnh hướng dẫn sử dụng riêng; biểu tượng tài liệu �
 ## Hành vi
 
 Responsive; menu mobile; 6 ảnh có vuốt, bàn phím, mũi tên, tự chuyển/tạm dừng và phóng to bằng dialog. Tạm dừng khi hover/focus, tab ẩn, gallery ngoài viewport. Giảm chuyển động tắt tự chuyển mặc định. Reload quay về đầu trang. FAQ native details; video native controls. Font tiếng Việt lưu cùng build, không phụ thuộc Google Fonts.
+
+## Cập nhật ảnh hợp thể D9
+
+Ảnh từ `d9-full.rar` do người dùng cung cấp thay cho ảnh hợp thể cũ trong carousel, ảnh thu nhỏ, phóng to và mục hợp thể D9. Lưu tại `public/images/rex-kaiser-d9-full.webp`, WebP lossless giữ nguyên pixel sản phẩm và nền trong suốt. Không chỉnh sửa thêm chi tiết. Chú thích phản ánh Rex Kaiser Black Edition kết hợp các chiến binh D9 nhiều màu. Ảnh đen–vàng trước đó được giữ lại làm tài sản dự phòng.

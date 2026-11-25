@@ -9,14 +9,14 @@ const shop='https://shopee.vn/sunlandhobby';
 const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
 const external='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 const machina=(name)=>`/images/machina/${name}.webp`;
-const image=(view)=>`/images/rex-kaiser-black-${view}.webp`;
+const image=(view)=>view === 'combined' ? '/images/rex-kaiser-d9-full.webp' : `/images/rex-kaiser-black-${view}.webp`;
 const views=[
 {key:'box',name:'Hộp sản phẩm',title:'Bắt đầu một bộ sưu tập.',text:'Thiết kế bao bì đen–vàng đồng điệu với tạo hình Black Edition. Xem đúng phân loại và phụ kiện kèm theo tại gian hàng.'},
 {key:'coin',name:'Huy hiệu',title:'Dấu ấn của bạo chúa.',text:'Biểu tượng T-Rex vàng trên nền đen, nối tiếp ngôn ngữ hình khối góc cạnh của Rex Kaiser.'},
 {key:'beast',name:'Dạng thú',title:'Bản năng T-Rex.',text:'Dáng đứng mạnh mẽ, bộ hàm cơ giới và các điểm nhấn vàng tạo nên diện mạo khủng long của Black Edition.'},
 {key:'car',name:'Dạng xe',title:'Một diện mạo khác.',text:'Thân xe đen với đường nét đỏ và chi tiết vàng. Một góc nhìn khác trong hành trình biến đổi của Rex Kaiser.'},
 {key:'robot',name:'Dạng robot',title:'Bạo chúa thức tỉnh.',text:'Thanh kiếm lớn, giáp đen và áo choàng đỏ. Hình thái robot thể hiện rõ nét diện mạo của phiên bản Black Edition Deluxe.'},
-{key:'combined',name:'Hợp thể D9',title:'Sức mạnh của cả đội hình.',text:'Hình ảnh đội hình D9 Black kết hợp cùng Rex Kaiser. Các chiến binh nâng cấp có thể được bán riêng; kiểm tra cấu hình và khả năng tương thích trước khi mua.'},
+{key:'combined',name:'Hợp thể D9',title:'Sức mạnh của cả đội hình.',text:'Hình ảnh Rex Kaiser Black Edition kết hợp cùng các chiến binh D9 nhiều màu. Các chiến binh nâng cấp có thể được bán riêng; kiểm tra cấu hình và khả năng tương thích trước khi mua.'},
 ];
 const cta=(label='Mua trên Shopee',classes='button red')=>`<a class="${classes}" href="${shop}" target="_blank" rel="noopener noreferrer">${label}${external}</a>`;
 document.querySelector('#app').innerHTML=`
@@ -71,8 +71,8 @@ document.querySelector('#app').innerHTML=`
  <p class="gallery-note">Ảnh sản phẩm đã tách nền từ ảnh gốc. Hình huy hiệu là hình dựng minh họa. Hình hợp thể có thể gồm các sản phẩm bán riêng.</p><p class="sr-only" id="gallery-status" aria-live="polite"></p>
 </section>
 <section class="combination" id="hop-the" aria-labelledby="combine-title">
- <div class="combination-copy"><p class="eyebrow gold">HỢP THỂ D9 BLACK</p><h2 id="combine-title">KHI CẢ ĐỘI HÌNH<br><em>CÙNG THỨC TỈNH.</em></h2><p>Rex Kaiser ở trung tâm.<br>Các chiến binh D9 mở rộng diện mạo hợp thể.</p><p class="muted">Khám phá cấu hình D9 Black với phối màu đen–vàng đồng điệu. Hãy kiểm tra đúng phiên bản và từng chiến binh đi kèm tại gian hàng.</p>${cta('Tìm hiểu bộ hợp thể','text-link gold')}</div>
- <div class="combination-art"><span aria-hidden="true">D9</span><img src="${image('combined')}" alt="Đội hình Rex Kaiser hợp thể D9 Black với các chiến binh màu đen và vàng" width="897" height="776" loading="lazy" /><p>Ảnh minh họa cấu hình hợp thể. Các chiến binh có thể bán riêng.</p></div>
+ <div class="combination-copy"><p class="eyebrow gold">HỢP THỂ D9</p><h2 id="combine-title">KHI CẢ ĐỘI HÌNH<br><em>CÙNG THỨC TỈNH.</em></h2><p>Rex Kaiser ở trung tâm.<br>Các chiến binh D9 mở rộng diện mạo hợp thể.</p><p class="muted">Khám phá Rex Kaiser Black Edition ở trung tâm, kết hợp cùng các chiến binh D9 nhiều màu. Hãy kiểm tra đúng phiên bản và từng chiến binh đi kèm tại gian hàng.</p>${cta('Tìm hiểu bộ hợp thể','text-link gold')}</div>
+ <div class="combination-art"><span aria-hidden="true">D9</span><img src="${image('combined')}" alt="Rex Kaiser Black Edition hợp thể cùng các chiến binh D9 nhiều màu" width="1320" height="1191" loading="lazy" /><p>Ảnh minh họa cấu hình hợp thể. Các chiến binh có thể bán riêng.</p></div>
 </section>
 <section class="video-section section" id="video" aria-labelledby="video-title">
  <div class="section-meta"><span>VIDEO THỰC TẾ</span><span>XEM TRƯỚC KHI CHỌN</span></div>
