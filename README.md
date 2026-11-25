@@ -29,7 +29,7 @@ Truy cập trực tiếp từ cloud bị chặn bởi allowlist (`CONNECT tunnel
 - `machina.rar`: ảnh mở đầu, ảnh áo choàng chính và ảnh phụ, robot đứng thẳng, kiếm rời, áo choàng rời, hai mặt coin, mô hình chỉ vị trí chi tiết, ba ảnh cận cảnh và ba hình thái. Ảnh giữ nguyên pixel hiển thị và độ trong suốt của sản phẩm gốc, chỉ chuyển PNG sang WebP lossless; WebP có sẵn được giữ nguyên file. Riêng `card-4` xóa nhãn tiếng Anh rồi đặt chữ Việt, không thay đổi hình coin/mũi tên.
 - 6 dạng: hộp → huy hiệu → thú → xe → robot → hợp thể D9.
 - Thông tin Deluxe 32 cm / Chinese Version dựa trên mô tả người dùng trong dự án trước, cần đối chiếu đúng listing Shopee trước khi phát hành.
-- Video Black Edition Deluxe do người dùng gửi; video tải khi người xem yêu cầu, không autoplay.
+- Video chi tiết Black Edition Deluxe mới do người dùng gửi (3 phút 08 giây), chuyển từ HEVC sang H.264/AAC 720 × 1280, MP4 faststart để tương thích trình duyệt. Ảnh bìa lấy từ video. Video tải khi người xem yêu cầu, không autoplay.
 - Ảnh nhân vật/quyền thương hiệu thuộc chủ sở hữu tương ứng; attribution SAMG/EBS nằm ở footer. Chưa gắn thông tin xuất xứ sản xuất, giá, khuyến mãi, tồn kho hay cam kết bảo hành chưa được cung cấp.
 - Các nút mua Rex Kaiser Black dẫn tới https://s.shopee.vn/4fy4AhOHGl do người dùng cung cấp. Nút gian hàng và tìm hiểu bộ hợp thể giữ https://shopee.vn/sunlandhobby; nút cuối trang dẫn tới fanpage Facebook.
 
