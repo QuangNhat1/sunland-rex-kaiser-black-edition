@@ -91,7 +91,7 @@ document.querySelector('#app').innerHTML=`
 <details><summary>Áo choàng có thể tạo dáng không?<span>+</span></summary><p>Nguồn Machina Core mô tả áo choàng Kaiser của bản Hàn có 6 dây kim loại để tạo dáng. Với bản Trung, hãy hỏi shop về cấu tạo áo choàng trong đúng phân loại bạn chọn.</p></details>
 <details><summary>Mua hàng và nhận hỗ trợ ở đâu?<span>+</span></summary><p>Mọi nút mua hàng trên trang đều dẫn đến gian hàng Shopee Sunland Hobby. Bạn có thể xem giá hiện tại, hỏi về phụ kiện, giao hàng và chính sách hỗ trợ tại đó.</p></details>
 </div></div></section>
-<section class="closing"><p class="eyebrow">BUILD · COLLECT · ENJOY</p><h2>GÓC TRƯNG BÀY CỦA BẠN.<br><em>KHÍ CHẤT CỦA BLACK EDITION.</em></h2>${cta('Khám phá tại Sunland Hobby')}</section>
+<section class="closing"><p class="eyebrow">BUILD · COLLECT · ENJOY</p><h2>GÓC TRƯNG BÀY CỦA BẠN.<br><em>KHÍ CHẤT CỦA BLACK EDITION.</em></h2><a class="button red" href="https://www.facebook.com/sunlandhobby" target="_blank" rel="noopener noreferrer">Theo dõi Sunland Hobby trên Facebook ${external}</a></section>
 </main>
 <footer><a class="footer-brand" href="#dau-trang">SUN<span>LAND</span> HOBBY</a><p>© Sunland Hobby. Hình ảnh sản phẩm: SAMG/EBS và nguồn ảnh được cung cấp. Nội dung thiết kế tham khảo: Machina Core.<br>Miniforce, Dinoid Warriors và các nhân vật thuộc chủ sở hữu tương ứng.</p><a href="#dau-trang" class="text-link">Về đầu trang ↑</a></footer>
 <div class="mobile-purchase"><div><strong>REX KAISER</strong><span>Black Edition Deluxe · Chinese Version</span></div><p>Giá & phụ kiện theo phân loại tại Shopee</p>${cta('Mua trên Shopee')}</div>
