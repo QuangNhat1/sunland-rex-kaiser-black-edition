@@ -40,7 +40,7 @@
 
 /* Gentle vertical motion for the active product; controls stay stationary. */
 .gallery{--product-float-distance:9px}
-#gallery-image{animation:product-float 4.8s ease-in-out infinite;animation-play-state:paused}
+#gallery-image{animation:product-float 9.6s ease-in-out infinite;animation-play-state:paused}
 .gallery.float-active #gallery-image{animation-play-state:running}
 .gallery:hover #gallery-image,.gallery:focus-within #gallery-image{animation-play-state:paused}
 @keyframes product-float{0%,100%{transform:translateY(var(--product-float-distance))}50%{transform:translateY(calc(-1 * var(--product-float-distance)))}}
