@@ -37,3 +37,12 @@
 .cape-inset{width:72%;margin-top:25px;max-width:340px}
 .details-model{width:100%}.detail-crop{height:auto;aspect-ratio:1060/660}.detail-crop img{position:static;width:100%;height:100%;object-fit:contain}
 }
+
+/* Gentle vertical motion for the active product; controls stay stationary. */
+.gallery{--product-float-distance:9px}
+#gallery-image{animation:product-float 4.8s ease-in-out infinite;animation-play-state:paused}
+.gallery.float-active #gallery-image{animation-play-state:running}
+.gallery:hover #gallery-image,.gallery:focus-within #gallery-image{animation-play-state:paused}
+@keyframes product-float{0%,100%{transform:translateY(var(--product-float-distance))}50%{transform:translateY(calc(-1 * var(--product-float-distance)))}}
+@media(max-width:760px){.gallery{--product-float-distance:5px}}
+@media(prefers-reduced-motion:reduce){#gallery-image{animation:none;transform:none}}

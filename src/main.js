@@ -105,7 +105,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 let index=0,manualUntil=0,isLoading=false,inView=false,hover=false,focus=false;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'),stage=document.querySelector('.gallery-stage'),gallery=document.querySelector('.gallery'),mainImage=document.querySelector('#gallery-image'),tabs=[...document.querySelectorAll('[data-view]')],pause=document.querySelector('#autoplay');
 let paused=reduced.matches;
-function pauseLabel(){pause.textContent=paused?'Tự chuyển':'Tạm dừng';pause.setAttribute('aria-pressed',String(paused));}
+function syncFloat(){gallery.classList.toggle('float-active',inView&&!document.hidden&&!paused&&!reduced.matches);}
+function pauseLabel(){pause.textContent=paused?'Tự chuyển':'Tạm dừng';pause.setAttribute('aria-pressed',String(paused));syncFloat();}
 pauseLabel();reduced.addEventListener('change',e=>{if(e.matches){paused=true;pauseLabel();}});
 let request=0;
 function showView(next,manual=true){index=(next+views.length)%views.length;const view=views[index];isLoading=true;const id=++request;mainImage.src=image(view.key);mainImage.alt=`Rex Kaiser Black Edition — ${view.name}`;mainImage.decode().catch(()=>{}).finally(()=>{if(id===request)isLoading=false;});document.querySelector('#view-name').textContent=view.name;document.querySelector('#view-title').textContent=view.title;document.querySelector('#view-description').textContent=view.text;document.querySelector('.gallery-count').textContent=`0${index+1} / 06`;tabs.forEach((tab,i)=>tab.setAttribute('aria-pressed',String(index===i)));if(manual){manualUntil=Date.now()+10000;document.querySelector('#gallery-status').textContent=`${view.name}, ảnh ${index+1} trên 6`;const tab=tabs[index];if(tab.offsetLeft<tab.parentElement.scrollLeft||tab.offsetLeft+tab.offsetWidth>tab.parentElement.scrollLeft+tab.parentElement.clientWidth)tab.parentElement.scrollTo({left:tab.offsetLeft-tab.parentElement.offsetLeft,behavior:reduced.matches?'instant':'smooth'});}}
@@ -116,7 +117,8 @@ let pointer;
 stage.addEventListener('pointerdown',e=>{if(e.target.closest('button')||!e.isPrimary)return;pointer={x:e.clientX,y:e.clientY,id:e.pointerId};});
 stage.addEventListener('pointerup',e=>{if(!pointer||e.pointerId!==pointer.id)return;const dx=e.clientX-pointer.x,dy=e.clientY-pointer.y;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3)showView(index+(dx<0?1:-1));pointer=null;});stage.addEventListener('pointercancel',()=>pointer=null);
 gallery.addEventListener('mouseenter',()=>hover=true);gallery.addEventListener('mouseleave',()=>hover=false);gallery.addEventListener('focusin',()=>focus=true);gallery.addEventListener('focusout',e=>{focus=gallery.contains(e.relatedTarget);});
-new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;},{threshold:.25}).observe(gallery);
+new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;syncFloat();},{threshold:.25}).observe(gallery);
+document.addEventListener('visibilitychange',syncFloat);
 pause.addEventListener('click',()=>{paused=!paused;pauseLabel();manualUntil=Date.now()+1000;});
 setInterval(()=>{if(!paused&&!hover&&!focus&&!document.hidden&&inView&&!isLoading&&Date.now()>manualUntil)showView(index+1,false);},7000);
 const dialog=document.querySelector('#image-dialog');document.querySelector('.zoom-button').addEventListener('click',()=>{dialog.querySelector('img').src=image(views[index].key);dialog.querySelector('img').alt=mainImage.alt;dialog.querySelector('p').textContent=views[index].name;dialog.showModal();});document.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
